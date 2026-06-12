@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechStore</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <h1>🛒 TechStore</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <h2>Checkout</h2>
+            <div class="checkout-container">
+                <form class="checkout-form" onsubmit="submitCheckout(event)">
+                    <!-- Billing Information -->
+                    <div class="form-section">
+                        <h3>Billing Information</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Street Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="City" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="State" required>
+                            <input type="text" placeholder="Zip Code" required>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="form-section">
+                        <h3>Payment Information</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Card Number" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="MM/YY" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Complete Order</button>
+                </form>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutItems"></div>
+                    <hr>
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span id="checkoutSubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax (10%):</span>
+                        <span id="checkoutTax">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping:</span>
+                        <span id="checkoutShipping">$0.00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span id="checkoutTotal">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 TechStore. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
